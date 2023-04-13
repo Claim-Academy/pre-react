@@ -1,3 +1,5 @@
+import data from './data';
+
 // DOM - Document Object Model
 // DOM is a JS object that represents the nodes (parents/children) of the HTML document
 const root = document.getElementById('root');
