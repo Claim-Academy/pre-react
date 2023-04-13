@@ -1,11 +1,12 @@
-export default function SelectCategories() {
+export default function SelectCategories({categories}) {
 
   // In React, each component must return a single element (parent)
   return `
     <div>
-      <label for="categories" class="block text-gray-700 text-sm font-bold mb-2">Categories</label>
-      <select class="w-full p-2 my-4">
+      <label for="categories">Categories</label>
+      <select>
         <option value="all">All</option>
+        ${categories.map(category => `<option value="${category.toLowerCase()}">${category}</option>`).join('')}
       </select>
     </div>
   `
